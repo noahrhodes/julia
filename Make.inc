@@ -1197,6 +1197,8 @@ endif
 endef
 $(foreach proj,$(BB_PROJECTS),$(eval $(call SET_BB_DEFAULT,$(proj))))
 
+# HACK: DON'T COMMIT ME TO MASTER
+USE_BINARYBUILDER_LIBUNWIND=0
 
 # Warn if the user tries to build something that requires `gfortran` but they don't have it installed.
 ifeq ($(FC_VERSION),)
